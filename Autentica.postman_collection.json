@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e85949ee-42b1-4dfd-b5a2-22fdc1aec6cd",
+		"_postman_id": "ecaa3e0e-2d01-4821-ba72-e14275c87ba7",
 		"name": "Autentica",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -25,10 +25,10 @@
 					"raw": "{\"username\":\"ruben02\",\r\n\"password\":\"password\",\r\n\"nombres\":\"Ruben\",\r\n\"paterno\":\"personal\",\r\n\"materno\":\"Indicado\",\r\n\"email\":\"ruben@gmail.com\",\r\n\"perfil\":\"ROLE_ADMIN\",\r\n\"minutes\":\"100\"}"
 				},
 				"url": {
-					"raw": "https://autenticator-systems.herokuapp.com/users/createAutoUser",
+					"raw": "https://servicio-de-autenticacion.herokuapp.com/users/createAutoUser",
 					"protocol": "https",
 					"host": [
-						"autenticator-systems",
+						"servicio-de-autenticacion",
 						"herokuapp",
 						"com"
 					],
@@ -48,7 +48,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNTg3NzY3ODI2LCJleHAiOjE1ODc3Njc4MjZ9.RMazUMl0BPzkI_LbQM2bbu4SZOMl0TBt5QOTxKgKseI",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNTg4Mjg3NTQyLCJleHAiOjE1ODgyODc1NDJ9.XfQhm7DsUejI0KRwV_9-RGTBQALla2kXQOXr2fjxhtw",
 							"type": "string"
 						}
 					]
@@ -66,10 +66,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://autenticator-systems.herokuapp.com/me",
+					"raw": "https://servicio-de-autenticacion.herokuapp.com/me",
 					"protocol": "https",
 					"host": [
-						"autenticator-systems",
+						"servicio-de-autenticacion",
 						"herokuapp",
 						"com"
 					],
@@ -107,10 +107,10 @@
 					"raw": "{\"username\":\"jospena12\",\r\n\"password\":\"password\",\r\n\"nombres\":\"Jose Antonio\",\r\n\"paterno\":\"Penna\",\r\n\"materno\":\"Mendoza\",\r\n\"email\":\"jospena12@yahoo.com.mx\",\r\n\"perfil\":\"1\",\r\n\"minutes\":\"100\"}"
 				},
 				"url": {
-					"raw": "https://autenticator-systems.herokuapp.com/users/createUser",
+					"raw": "https://servicio-de-autenticacion.herokuapp.com/users/createUser",
 					"protocol": "https",
 					"host": [
-						"autenticator-systems",
+						"servicio-de-autenticacion",
 						"herokuapp",
 						"com"
 					],
@@ -148,10 +148,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://autenticator-systems.herokuapp.com/users/logout",
+					"raw": "https://servicio-de-autenticacion.herokuapp.com/users/logout",
 					"protocol": "https",
 					"host": [
-						"autenticator-systems",
+						"servicio-de-autenticacion",
 						"herokuapp",
 						"com"
 					],
@@ -173,10 +173,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://autenticator-systems.herokuapp.com/users/logoutAll",
+					"raw": "https://servicio-de-autenticacion.herokuapp.com/users/logoutAll",
 					"protocol": "https",
 					"host": [
-						"autenticator-systems",
+						"servicio-de-autenticacion",
 						"herokuapp",
 						"com"
 					],
@@ -205,13 +205,13 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"username\":\"admin\",\n    \"password\":\"p4ssw0rd$\"\n}  "
+					"raw": "{\"username\":\"admin\",\n    \"password\":\"password\"\n}  "
 				},
 				"url": {
-					"raw": "https://autenticator-ystems.herokuapp.com/auth/signin",
+					"raw": "https://servicio-de-autenticacion.herokuapp.com/auth/signin",
 					"protocol": "https",
 					"host": [
-						"autenticator-ystems",
+						"servicio-de-autenticacion",
 						"herokuapp",
 						"com"
 					],
