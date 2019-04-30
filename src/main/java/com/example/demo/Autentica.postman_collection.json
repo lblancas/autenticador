@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "e85949ee-42b1-4dfd-b5a2-22fdc1aec6cd",
+		"name": "Autentica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createAutoUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"ruben02\",\r\n\"password\":\"password\",\r\n\"nombres\":\"Ruben\",\r\n\"paterno\":\"personal\",\r\n\"materno\":\"Indicado\",\r\n\"email\":\"ruben@gmail.com\",\r\n\"perfil\":\"ROLE_ADMIN\",\r\n\"minutes\":\"100\"}"
+				},
+				"url": {
+					"raw": "https://autenticator-systems.herokuapp.com/users/createAutoUser",
+					"protocol": "https",
+					"host": [
+						"autenticator-systems",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"createAutoUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InformacionToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNTg3NzY3ODI2LCJleHAiOjE1ODc3Njc4MjZ9.RMazUMl0BPzkI_LbQM2bbu4SZOMl0TBt5QOTxKgKseI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://autenticator-systems.herokuapp.com/me",
+					"protocol": "https",
+					"host": [
+						"autenticator-systems",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUserByAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNTg3NzY3ODI2LCJleHAiOjE1ODc3Njc4MjZ9.RMazUMl0BPzkI_LbQM2bbu4SZOMl0TBt5QOTxKgKseI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"jospena12\",\r\n\"password\":\"password\",\r\n\"nombres\":\"Jose Antonio\",\r\n\"paterno\":\"Penna\",\r\n\"materno\":\"Mendoza\",\r\n\"email\":\"jospena12@yahoo.com.mx\",\r\n\"perfil\":\"1\",\r\n\"minutes\":\"100\"}"
+				},
+				"url": {
+					"raw": "https://autenticator-systems.herokuapp.com/users/createUser",
+					"protocol": "https",
+					"host": [
+						"autenticator-systems",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNTg3NzY3ODI2LCJleHAiOjE1ODc3Njc4MjZ9.RMazUMl0BPzkI_LbQM2bbu4SZOMl0TBt5QOTxKgKseI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://autenticator-systems.herokuapp.com/users/logout",
+					"protocol": "https",
+					"host": [
+						"autenticator-systems",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogoutAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://autenticator-systems.herokuapp.com/users/logoutAll",
+					"protocol": "https",
+					"host": [
+						"autenticator-systems",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"logoutAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"admin\",\n    \"password\":\"p4ssw0rd$\"\n}  "
+				},
+				"url": {
+					"raw": "https://autenticator-ystems.herokuapp.com/auth/signin",
+					"protocol": "https",
+					"host": [
+						"autenticator-ystems",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
